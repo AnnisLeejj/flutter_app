@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -65,6 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       httpStr = "开始请求";
       HttpClient client = new HttpClient();
+      client.connectionTimeout = Duration(seconds: 3);
       client
           .getUrl(Uri.parse("http://www.baidu.com/"))
           .then((HttpClientRequest request) {
@@ -72,8 +75,15 @@ class _MyHomePageState extends State<MyHomePage> {
         // Optionally write to the request object...
         // Then call close.
         return request.close();
-      }).then((HttpClientResponse response) {
-        httpStr = response.toString();
+      }).then((HttpClientResponse response) async {
+        if (response.statusCode == HttpStatus.OK) {
+          var json = await response.transform(utf8.decoder).join();
+          var data = jsonDecode(json);
+          httpStr = data['origin'];
+        } else {
+          httpStr =
+              'Error getting IP address:\nHttp status ${response.statusCode}';
+        }
       });
     });
   }
