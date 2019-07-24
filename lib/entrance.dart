@@ -2,16 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 import 'package:flutter_app/_1_theme.dart';
 import 'package:flutter_app/_2_image.dart';
+import '_3_list.dart';
+import '_4_toutch.dart';
+import '_5_navigator.dart';
+import '_6_network.dart';
 import 'myLib.dart';
 
 //void main() => runApp(new MyApp());
+//void main() => runApp(getListView());
+//void main() => runApp(getTouchView());
+//void main() => runApp(getNavigator());
+void main() => runApp(getNetWork());
 
-void main() {
-  runApp(new MaterialApp(
-    title: 'My app', // used by the OS task switcher
-    home: new MyAppImageHolder()//MyAppImage()//MyAppTheme()//TutorialHome(),//MyScaffold(),
-  ));
-}
+//void main() {
+//  runApp(new MaterialApp(
+//    title: 'My app', // used by the OS task switcher
+//    home: new AppImageNetCache()//MyAppImageHolder()//MyAppImage()//MyAppTheme()//TutorialHome(),//MyScaffold(),
+//  ));
+//}
 
 //
 //class MyApp extends StatelessWidget {
