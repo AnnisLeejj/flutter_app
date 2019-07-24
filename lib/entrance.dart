@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
-import 'package:flutter_app/_1_theme.dart';
-import 'package:flutter_app/_2_image.dart';
-import '_3_list.dart';
-import '_4_toutch.dart';
-import '_5_navigator.dart';
-import '_6_network.dart';
+import 'package:flutter_app/part_1/_1_theme.dart';
+import 'package:flutter_app/part_1/_2_image.dart';
+import 'package:flutter_app/part_1/_3_list.dart';
+import 'package:flutter_app/part_1/_4_toutch.dart';
+import 'package:flutter_app/part_1/_5_navigator.dart';
+import 'package:flutter_app/part_1/_6_network.dart';
 import 'myLib.dart';
+import 'part_2_build_app/build_layout.dart';
 
+/*********  part_1  **************/
 //void main() => runApp(new MyApp());
 //void main() => runApp(getListView());
 //void main() => runApp(getTouchView());
 //void main() => runApp(getNavigator());
-void main() => runApp(getNetWork());
+//void main() => runApp(getNetWork());
 
 //void main() {
 //  runApp(new MaterialApp(
@@ -21,23 +23,5 @@ void main() => runApp(getNetWork());
 //  ));
 //}
 
-//
-//class MyApp extends StatelessWidget {
-//  @override
-//  Widget build(BuildContext context) {
-//    final wordPair = new WordPair.random();  // 删除此行
-//
-//    return new MaterialApp(
-//      title: 'Welcome to Flutter',
-//      home: new Scaffold(
-//        appBar: new AppBar(
-//          title: new Text('Welcome to Flutter'),
-//        ),
-//        body: new Center(
-//          //child: new Text(wordPair.asPascalCase),
-//          child: new RandomWords(),
-//        ),
-//      ),
-//    );
-//  }
-//}
+/*********  part_2  **************/
+void main() => runApp(getAppLayout());
