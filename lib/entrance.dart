@@ -6,8 +6,9 @@ import 'package:flutter_app/part_1/_3_list.dart';
 import 'package:flutter_app/part_1/_4_toutch.dart';
 import 'package:flutter_app/part_1/_5_navigator.dart';
 import 'package:flutter_app/part_1/_6_network.dart';
+import 'package:flutter_app/part_2_build_app/build_main.dart';
 import 'myLib.dart';
-import 'part_2_build_app/build_layout.dart';
+import 'part_2_build_app/build_state.dart';
 
 /*********  part_1  **************/
 //void main() => runApp(new MyApp());

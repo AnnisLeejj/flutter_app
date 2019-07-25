@@ -36,7 +36,7 @@ class AppGridView extends StatelessWidget {
           // horizontal, this would produce 2 rows.
           crossAxisCount: 4,
           // Generate 100 Widgets that display their index in the List
-          children: new List.generate(100, (index) {
+          children: new List.generate(10000, (index) {
             return new Center(
               child: new Text(
                 'Item $index',
