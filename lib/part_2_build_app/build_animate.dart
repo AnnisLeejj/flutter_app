@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class LogoApp extends StatefulWidget {
   @override
@@ -20,8 +21,8 @@ class _LogoAppState extends State<LogoApp> with SingleTickerProviderStateMixin {
         setState(() {
           // The state that has changed here is the animation object’s value.
         });
-      });
-
+      })
+      ..addStatusListener((state) => Fluttertoast.showToast(msg: "$state"));
     controller.forward();
   }
 
