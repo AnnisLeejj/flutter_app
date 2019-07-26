@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -29,6 +30,8 @@ class SampleAppPage extends StatefulWidget {
 
 class _SampleAppPageState extends State<SampleAppPage> {
   List widgets = [];
+  String jpg =
+      'https://ss1.bdstatic.com/5aAHeD3nKgcUp2HgoI7O1ygwehsv/media/ch1/jpg/%E5%A4%8F%E8%87%B3%E9%80%9A%E6%A0%8Fpc.jpg';
 
   @override
   void initState() {
@@ -40,7 +43,6 @@ class _SampleAppPageState extends State<SampleAppPage> {
     if (widgets.length == 0) {
       return true;
     }
-
     return false;
   }
 
@@ -53,7 +55,15 @@ class _SampleAppPageState extends State<SampleAppPage> {
   }
 
   getProgressDialog() {
-    return new Center(child: new CircularProgressIndicator());
+//    return new Center(
+//        child: new CachedNetworkImage(
+//      imageUrl: jpg,
+//      placeholder: (context, url) => CircularProgressIndicator(),
+//      errorWidget: (context, url, error) => Icon(Icons.error),
+//    ));
+
+    return new Center(child: new Image.asset("assets/images/lake.jpg"));
+//    return new Center(child: new CircularProgressIndicator());
   }
 
   @override

@@ -27,25 +27,24 @@ dependencies:
   cached_network_image: ^1.1.1
   fluttertoast: ^2.1.1
   web_socket_channel: ^1.0.14
+  shared_preferences: ^0.5.3+4
+  sqflite: ^1.1.6+2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-
-
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
 
 # The following section is specific to Flutter.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
-
+  assets:
+    - assets/images/
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg
@@ -76,3 +75,4 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
